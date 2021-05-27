@@ -1,0 +1,13 @@
+import operator
+string = list(map(str, input('Please enter a string : ').strip()))
+def most_frequent():
+	a = {}
+	keys = a.keys()
+	for i in string:
+		if i in keys :
+			a[i] += 1
+		else :
+			a[i] = 1
+	b = sorted(a.items(),key=operator.itemgetter(1), reverse= True)
+	return b
+print(most_frequent())
